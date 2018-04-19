@@ -77,7 +77,7 @@ public class CarBookingMain {
 		dataSource.setPort(3306);
 		dataSource.setServerName("localhost");
 		dataSource.setUser("root");
-		dataSource.setPassword("root");
+		dataSource.setPassword("password");
 		dataSource.setDatabaseName("rental_cars");
 		return dataSource;
 	}

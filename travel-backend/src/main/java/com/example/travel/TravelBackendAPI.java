@@ -74,6 +74,7 @@ public class TravelBackendAPI implements MessageListener {
     // We are already in JTA transaction because we are using Atomikos JMS container
     @Override
     public void onMessage(Message message) {
+        logger.info("receiving message...", message);
         try {
             BookingDTO request = BookingDTO.from(message);
             logger.info("Received JMS-request {} transactionId={}", request, tm.getTransaction());

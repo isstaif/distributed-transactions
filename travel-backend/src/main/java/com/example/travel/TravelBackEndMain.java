@@ -35,7 +35,7 @@ import java.io.IOException;
 @SpringBootApplication
 public class TravelBackEndMain {
 
-    private static final File TX_LOG_PATH = new File("C:\\Work\\JAVA tech talks\\Distributed transactions\\java\\distributed-transactions\\travel-backend\\transaction_log");
+    private static final File TX_LOG_PATH = new File("/home/amjad/code/distributed-transactions-master/travel-client/transaction_log");
     private static final File TX_LOG_PATH_CAR_SERVICE = new File(TX_LOG_PATH, "logs_car_service");
     private static final File TX_LOG_PATH_FLIGHT_SERVICE = new File(TX_LOG_PATH, "logs_flight_service");
 
@@ -128,7 +128,7 @@ public class TravelBackEndMain {
 		xaDataSource.setPort(3306);
 		xaDataSource.setServerName("localhost");
 		xaDataSource.setUser("root");
-		xaDataSource.setPassword("root");
+		xaDataSource.setPassword("password");
 		xaDataSource.setDatabaseName("travel_agency");
 		xaDataSource.setPinGlobalTxToPhysicalConnection(true); // https://www.atomikos.com/Documentation/KnownProblems#MySQL_XA_bug
 		return xaDataSource;
@@ -140,7 +140,7 @@ public class TravelBackEndMain {
 		xaDataSource.setPort(3306);
 		xaDataSource.setServerName("localhost");
 		xaDataSource.setUser("root");
-		xaDataSource.setPassword("root");
+		xaDataSource.setPassword("password");
 		xaDataSource.setDatabaseName("hotels");
 		xaDataSource.setPinGlobalTxToPhysicalConnection(true); // https://www.atomikos.com/Documentation/KnownProblems#MySQL_XA_bug
 		return xaDataSource;

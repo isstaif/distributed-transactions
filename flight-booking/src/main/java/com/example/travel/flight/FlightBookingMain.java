@@ -74,7 +74,7 @@ public class FlightBookingMain {
 		dataSource.setPort(3306);
 		dataSource.setServerName("localhost");
 		dataSource.setUser("root");
-		dataSource.setPassword("root");
+		dataSource.setPassword("password");
 		dataSource.setDatabaseName("flights");
 		return dataSource;
 	}

@@ -30,7 +30,7 @@ import java.io.IOException;
 @SpringBootApplication
 public class TravelClientMain {
 
-	private static final File TX_LOG_PATH = new File("C:\\Work\\JAVA tech talks\\Distributed transactions\\java\\distributed-transactions\\travel-client\\transaction_log");
+	private static final File TX_LOG_PATH = new File("/home/amjad/code/distributed-transactions-master/travel-client/transaction_log");
 
 	public static void main(String[] args) throws IOException {
 		// Clean atomikos logs
@@ -127,7 +127,7 @@ public class TravelClientMain {
 		db.setCreateDatabaseIfNotExist(true);
 		db.setPort(3306);
 		db.setUser("root");
-		db.setPassword("root");
+		db.setPassword("password");
 		db.setServerName("localhost");
 		db.setDatabaseName("travel_agency");
 		return db;

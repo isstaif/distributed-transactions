@@ -83,9 +83,10 @@ public class TravelClientAPI implements MessageListener {
     // Should be already in XA transaction
     @Override
     public void onMessage(Message message) {
-        MapMessage map = (MapMessage) message;
+        logger.info("receiving message...", message);
         try {
-            BookingDTO booking = BookingDTO.from(map);
+            //MapMessage map = (MapMessage) message;
+            BookingDTO booking = BookingDTO.from(message);
 
             // Update cache with new booking and new money transfer
             doInTransaction(cacheTx -> {

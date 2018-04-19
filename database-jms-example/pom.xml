@@ -12,7 +12,7 @@
     <artifactId>database-jms-example</artifactId>
 
     <properties>
-        <hazelcast.version>3.9-SNAPSHOT</hazelcast.version>
+        <hazelcast.version>3.9</hazelcast.version>
     </properties>
 
     <dependencies>
